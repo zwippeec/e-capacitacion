@@ -1,0 +1,13 @@
+body{
+	color: #222222;
+	background: #eeeeee;
+}
+.center{
+	text-align: center !important;
+}
+.marto15{
+	margin-top: 15px;
+}
+.marbo15{
+	margin-bottom: 15px;
+}

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/home">
+  	<img id="main-logo" src="assets/img/logo.png" alt="" class="d-inline-block align-top" width="50px">
+  	E-FORMAZZIONE
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      	<a class="nav-link" routerLink="/home">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+      	<a class="nav-link" routerLink="/course">Cursos</a>
+      </li>
+    </ul>
+    <ul class="my-2 my-lg-0">
+    	<input class="mr-sm-2" type="text" placeholder="Buscar curso" [(ngModel)]= "query">
+    	<br>
+    	<ng-container *ngFor="let curso of cursos | search: query; let i = index">
+    		<div>
+    			<a routerLink="/course/{{curso.cid}}">
+    		  		{{i}}. {{curso.name}}
+    			</a>
+    		</div>
+    	</ng-container>
+    </ul>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    	<li class="nav-item">
+    		<a class="nav-link" routerLink="/login">Ingresar</a>
+    	</li>
+    </ul>
+  </div>
+</nav>

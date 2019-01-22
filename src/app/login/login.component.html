@@ -1,0 +1,31 @@
+<div class="loginContainer">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-3">
+				<div class="avatarFrameoffline marto15 marbo15">
+					<img class="avatarImage img-fluid" src="assets/img/generic.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="col-md-6">
+				<div class="center">
+					<h3>Iniciar sesión</h3>
+				</div>
+				<div class="boreredContainer">
+					<input *ngIf="operation == 'register'" class="form-control marto15 marbo15" type="text" placeholder="Ingrese su nombre" name="">
+					<input class="form-control marto15 marbo15" type="email" placeholder="Ingrese el correo" name="">
+					<input class="form-control marto15 marbo15" type="password" placeholder="Ingrese la contraseña" name="">
+				</div>
+				<div class="center marto15 marbo15">
+					<a *ngIf="operation == 'login'" class="btn btn-primary">Ingresar</a>
+					<a *ngIf="operation == 'register'" class="btn btn-primary">Registro</a>
+				</div>
+				<div class="center">
+					<p *ngIf="operation == 'register'">¿Ya tienes cuenta? <a (click)= "operation= 'login'" >Ingresar</a></p>
+					<p *ngIf="operation == 'login'">¿Aún no tienes cuenta? <a (click)= "operation= 'register'" >Registro</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
